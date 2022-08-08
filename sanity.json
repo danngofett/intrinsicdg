@@ -1,0 +1,4 @@
+{
+  "implements": "part:@sanity/dashboard/config",
+  "path": "src/dashboardConfig.js"
+}

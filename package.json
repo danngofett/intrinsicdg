@@ -10,6 +10,7 @@
     "gatsby-plugin-manifest": "^4.20.0",
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-source-sanity": "^7.4.2",
     "gatsby-transformer-sharp": "^4.20.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
