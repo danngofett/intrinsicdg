@@ -1,23 +1,28 @@
 import * as React from 'react'
 import { PageProps, Link, graphql, HeadFC } from 'gatsby'
-import { PortableText } from '@portabletext/react'
+import { PortableText, PortableTextReactComponents } from '@portabletext/react'
 
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
 type DataProps = {
-  allSanityPost: [
-    edges: {
-      node: Post
-    }
-  ]
+  allSanityPost: {
+    edges: [
+      {
+        node: {
+          title: string
+          body: [
+            {
+              _rawChildren: PortableTextReactComponents
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
 
-type Post = {
-  title: string
-}
-
-const IndexRoute = ({ data, location }: PageProps<DataProps>) => {
+const IndexRoute = ({ data }: PageProps<DataProps>) => {
   const myPortableTextComponents = {
     types: {
       span: ({ value }) => <span>{value.text}</span>,
@@ -46,19 +51,12 @@ const IndexRoute = ({ data, location }: PageProps<DataProps>) => {
 
   return (
     <Layout>
-      <h1>
-        Gatsby supports <b>TypeScript by default</b>
-      </h1>
-      <p>
-        This means that you can create and write <code>.ts/.tsx</code> files for
-        your pages, components, and <code>gatsby-*</code> configuration files
-        (for example <code>gatsby-config.ts</code>).
-      </p>
-      <p>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <p className="py-4 flex">
         For type checking you'll want to install <code>typescript</code> via npm
         and run <code>tsc --init</code> to create a <code>tsconfig</code> file.
       </p>
-      {data.allSanityPost.edges.map((item: Post, index: number) => {
+      {data.allSanityPost.edges.map((item, index: number) => {
         return (
           <div key={index}>
             <p>{item.node.title}</p>
