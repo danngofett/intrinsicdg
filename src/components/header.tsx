@@ -6,6 +6,10 @@ import Logo from './logo'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
+export interface HeaderType {
+  siteTitle: string
+}
+
 const navigation = [
   { name: 'About', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
@@ -17,11 +21,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function Header({ siteTitle }: HeaderType) {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-white">
+        <Disclosure as="nav">
           {({ open }) => (
             <>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,11 +43,10 @@ export default function Header() {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? 'underline' : 'hover:underline',
                             item.cta
-                              ? 'bg-primary text-white hover:bg-gray-700 block px-3 py-2 rounded-lg text-base font-medium'
+                              ? 'bg-primary text-white hover:bg-gray-700 block px-3 py-2 rounded-lg text-base font-semibold hover:bg-primary'
                               : '',
-                            'px-3 py-2 text-md font-medium lowercase'
+                            'px-3 py-2 text-md font-semibold lowercase text-primary'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
@@ -81,7 +84,7 @@ export default function Header() {
                         item.current
                           ? 'bg-gray-900 text-white'
                           : 'text-primary hover:bg-gray-700 hover:text-white',
-                        'block px-3 py-2 rounded-md text-base font-medium'
+                        'block px-3 py-2 rounded-md text-base font-semibold'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
@@ -94,7 +97,7 @@ export default function Header() {
                     href="#"
                     className={classNames(
                       'text-primary hover:bg-gray-700 hover:text-white',
-                      'block px-3 py-2 rounded-md text-base font-medium'
+                      'block px-3 py-2 rounded-md text-base font-semibold'
                     )}
                   >
                     contact
