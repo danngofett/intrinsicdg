@@ -13,14 +13,15 @@ export default function Team({ heading, description, label, href }) {
         <p>{description}</p>
 
         <div className="mt-4 lg:mt-0 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href={href}
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-semibold rounded-md text-white bg-primary hover:bg-primary"
-            >
-              {label}
-            </a>
-          </div>
+          <a
+            href={href}
+            className="text-base font-semibold text-primary hover:underline"
+          >
+            {label}
+            <span className="inline-block ml-2" aria-hidden="true">
+              →
+            </span>
+          </a>
         </div>
       </div>
 
