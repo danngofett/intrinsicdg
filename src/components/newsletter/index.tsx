@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import TextInput from './text-input'
+import TextInput from '../text-input'
 export interface NewsletterType {
   heading: string
   description: string
@@ -17,6 +17,7 @@ export default function Newsletter({ heading, description }: NewsletterType) {
         <p>{description}</p>
 
         <TextInput
+          className="mt-2"
           label="Sign up to get notified when it’s ready"
           footnote="We care about your protection of data. Read our privacy policy."
         />

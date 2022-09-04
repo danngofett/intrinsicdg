@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -34,6 +36,19 @@ module.exports = {
         projectId: `b42jfuaf`,
         dataset: `production`,
         token: process.env.SANITY_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@assets': path.resolve(__dirname, 'src/assets'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@layout': path.resolve(__dirname, 'src/layout'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@styles': path.resolve(__dirname, 'src/styles'),
+        },
+        extensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
       },
     },
   ],

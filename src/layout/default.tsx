@@ -7,8 +7,7 @@
 
 import * as React from 'react'
 
-import Header from '../components/header'
-import SiteFooter from '../components/site-footer'
+import { Header, SiteFooter } from '@components'
 
 export default function Layout({ siteMeta, children }) {
   return (

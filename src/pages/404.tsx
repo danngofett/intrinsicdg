@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import Layout from '../layout/default'
-import Seo from '../components/seo'
+import { SEO } from '@components'
 
 const NotFoundPage = () => (
   <Layout>
@@ -10,6 +10,6 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = () => <SEO title="404: Not Found" />
 
 export default NotFoundPage

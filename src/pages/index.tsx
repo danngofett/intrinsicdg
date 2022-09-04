@@ -2,13 +2,8 @@ import * as React from 'react'
 import { PageProps, HeadFC } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '../layout/default'
-import Seo from '../components/seo'
-
-import CallToAction from '../components/cta'
-import Team from '../components/team'
-import Card from '../components/card'
-import Newsletter from '../components/newsletter'
+import Layout from '@layout/default'
+import { SEO, CallToAction, Team, Card, Newsletter } from '@components'
 
 type DataProps = {}
 
@@ -52,7 +47,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
 }
 
 export const Head: HeadFC<DataProps> = () => (
-  <Seo title="Intrinsic" children={undefined} />
+  <SEO title="Intrinsic" children={undefined} />
 )
 
 export default IndexRoute
