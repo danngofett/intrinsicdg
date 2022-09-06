@@ -10,8 +10,8 @@ export interface NewsletterType {
 
 export default function Newsletter({ heading, description }: NewsletterType) {
   return (
-    <div className="relative lg:py-12">
-      <Container className="grid gap-4 lg:grid-cols-12 py-12 lg:py-16 mt-16 relative">
+    <div className="relative">
+      <Container className="grid gap-4 lg:grid-cols-12 pt-0 py-12 lg:py-16 lg:mt-16 relative">
         <div className="lg:flex gap-4 lg:justify-between lg:flex-col lg:col-span-6 max-w-[455px]">
           <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl mb-4 lg:mb-0">
             <span className="block text-primary">{heading}</span>

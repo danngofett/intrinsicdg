@@ -11,10 +11,10 @@ export interface HeaderType {
 }
 
 const navigation = [
-  { name: 'About', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Products', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false, cta: true },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Team', href: '#team', current: false },
+  { name: 'Products', href: '#products', current: false },
+  { name: 'Contact', href: '#contact', current: false, cta: true },
 ]
 
 function classNames(...classes: string[]) {
@@ -28,9 +28,9 @@ export default function Header({ siteTitle }: HeaderType) {
         <Disclosure as="nav">
           {({ open }) => (
             <>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between">
-                  <div className="w-48 py-8">
+              <div className="fixed w-full top-0 z-10 px-8">
+                <div className="flex items-center justify-between shadow-lg rounded-lg px-8 py-4 max-w-7xl z-10 bg-white mx-auto mt-8">
+                  <div className="w-48">
                     <Link
                       to="/"
                       className="block text-primary"
@@ -65,7 +65,7 @@ export default function Header({ siteTitle }: HeaderType) {
                   </div>
 
                   {/* Mobile menu button */}
-                  <div className="-mr-2 flex md:hidden fixed z-10 right-12">
+                  <div className="-mr-2 flex md:hidden fixed z-20 right-12">
                     <Disclosure.Button className="bg-primary inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -82,7 +82,17 @@ export default function Header({ siteTitle }: HeaderType) {
               </div>
 
               <Disclosure.Panel className="md:hidden">
-                <div className="mt-32 px-2 pt-2 pb-3 space-y-1 sm:px-3 fixed inset-0 bg-white">
+                <div className="space-y-1 sm:px-3 fixed inset-0 bg-white z-10">
+                  <div className="w-48 py-10 pl-7">
+                    <Link
+                      to="/"
+                      className="block text-primary"
+                      title={siteTitle}
+                    >
+                      <Logo />
+                    </Link>
+                  </div>
+
                   {navigation.map(item => (
                     <Disclosure.Button
                       key={item.name}
@@ -92,7 +102,7 @@ export default function Header({ siteTitle }: HeaderType) {
                         item.current
                           ? 'bg-gray-900 text-white'
                           : 'text-primary hover:bg-gray-700 hover:text-white',
-                        'block px-3 py-2 rounded-md text-base font-semibold'
+                        'block px-8 py-2 rounded-md text-base font-semibold'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >

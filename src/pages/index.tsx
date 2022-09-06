@@ -20,18 +20,21 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
 
   return (
     <Default siteMeta={response.site.siteMeta}>
-      <section id="explore" className="my-16 md:my-20 lg:my-32 lg:mb-64">
+      <section
+        id="explore"
+        className="py-16 md:py-20 lg:py-32 lg:mb-20 lg:mt-40"
+      >
         <CallToAction
           heading="Explore the radical transparency mission statement"
           subheading="Explore now"
         />
       </section>
 
-      <section id="about" className="my-16 md:my-20 lg:my-24">
+      <section id="about" className="py-16 md:py-20 lg:py-12">
         <FeatureGrid heading="Simplify everyday business tasks" />
       </section>
 
-      <section id="team" className="my-16 md:my-20 lg:my-24">
+      <section id="team" className="py-16 md:py-20 lg:py-12">
         <Team
           heading="Meet our leadership"
           description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
@@ -40,7 +43,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
         />
       </section>
 
-      <section id="contact" className="my-16 md:my-20 lg:my-24">
+      <section id="contact" className="py-16 md:py-20 lg:py-12">
         <Newsletter
           heading="Explore the radical transparency mission statement"
           description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus lorem ipsum."
