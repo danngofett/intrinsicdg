@@ -19,6 +19,12 @@ module.exports = {
         primary: {
           DEFAULT: '#3B44AC',
         },
+        secondary: {
+          DEFAULT: '#202993',
+        },
+        tertiary: {
+          DEFAULT: '#4B54BA',
+        },
         grey: {
           200: '#D9D9D9',
         },

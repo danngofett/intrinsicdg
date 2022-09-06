@@ -1,7 +1,10 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import Logo from '../logo'
+import { Logo } from '@components'
+
+import AboriginalFlag from '@assets/images/aboriginal-flag.png'
+import TorresStraitIslanderFlag from '@assets/images/torres-strait-islander-flag.png'
 
 const navigation = [
   {
@@ -70,9 +73,26 @@ export default function Footer() {
             })}
           </div>
 
-          <ul className="flex gap-8 ">
-            <li>
-              <span>Copyright © 2022 TaxPal. All rights reserved.</span>
+          <div className="flex items-center space-x-4 my-12 pb-12 border-b-[1px] border-tertiary">
+            <img src={AboriginalFlag} alt="Aboriginal flag" className="h-9" />
+            <img
+              src={TorresStraitIslanderFlag}
+              alt="Torres Strait Islander flag"
+              className="h-9"
+            />
+
+            <p className="font-bold">
+              Intrinsic Development Group is located on the traditional lands of
+              the Wurundjeri-willam people of the Kulin Nation. We pay our
+              respects to Elders both past and present and recognise Aboriginal
+              and Torres Strait Islander people as the Traditional Custodians of
+              the land.
+            </p>
+          </div>
+
+          <ul className="flex gap-8">
+            <li className="mr-auto">
+              <span>Copyright © 2022 Intrinsic Development Group</span>
             </li>
 
             {disclaimer.links.map((item, index) => {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import Logo from '../logo'
+import { Logo, Button, NavLink } from '@components'
 
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -41,22 +41,26 @@ export default function Header({ siteTitle }: HeaderType) {
                   </div>
 
                   <div className="hidden md:block">
-                    <div className="ml-10 flex items-baseline space-x-4">
-                      {navigation.map(item => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.cta
-                              ? 'bg-primary text-white block px-3 py-2 rounded-lg text-base font-semibold hover:bg-primary'
-                              : '',
-                            'px-3 py-2 text-md font-semibold lowercase text-primary relative after:content after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-primary after:h-[2px] after:opacity-0 hover:after:opacity-100 hover:after:w-full after:transition-all after:duration-500 after:origin-center after:mx-auto after:right-0'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))}
+                    <div className="ml-10 flex items-baseline space-x-8">
+                      {navigation.map(item => {
+                        if (item.cta) {
+                          return (
+                            <Button
+                              key={item.name}
+                              href={item.href}
+                              label={item.name}
+                            />
+                          )
+                        }
+
+                        return (
+                          <NavLink
+                            key={item.name}
+                            href={item.href}
+                            label={item.name}
+                          />
+                        )
+                      })}
                     </div>
                   </div>
 
