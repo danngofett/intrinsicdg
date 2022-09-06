@@ -3,7 +3,14 @@ import { PageProps, HeadFC } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Default } from '@layout'
-import { SEO, CallToAction, Team, Card, Newsletter } from '@components'
+import {
+  SEO,
+  CallToAction,
+  Team,
+  Card,
+  Newsletter,
+  Container,
+} from '@components'
 
 type DataProps = {}
 
@@ -25,11 +32,13 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
         subheading="Explore now"
       />
 
-      <div className="grid lg:grid-cols-3 gap-12 mx-auto max-w-xl lg:max-w-5xl my-32">
-        <Card title="Transparency" />
-        <Card title="Community" />
-        <Card title="Experience" />
-      </div>
+      <Container>
+        <div className="grid lg:grid-cols-3 gap-12 mx-auto max-w-xl lg:max-w-5xl lg:my-32">
+          <Card title="Transparency" />
+          <Card title="Community" />
+          <Card title="Experience" />
+        </div>
+      </Container>
 
       <Team
         heading="Meet our leadership"
@@ -39,7 +48,6 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
       />
 
       <Newsletter
-        className="mt-24"
         heading="Explore the radical transparency mission statement"
         description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus lorem ipsum."
       />

@@ -44,26 +44,22 @@ export default function Footer() {
               </div>
 
               <div className="max-w-xs pr-8">
-                <p className="text-sm">
+                <p className="text-base">
                   Intrinsic development group is an Australian owned business
                   with some example text displayed here
                 </p>
               </div>
             </div>
 
-            {navigation.map(item => {
+            {navigation.map((item, index) => {
               return (
-                <div className="hidden md:block lg:col-span-3">
+                <div className="hidden md:block lg:col-span-3" key={index}>
                   <h2 className="text-xl font-bold mb-4">{item.category}</h2>
 
                   <ul className="links-baseline">
                     {item.links.map(item => (
-                      <li className="mx-0 my-2">
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="text-md hover:underline"
-                        >
+                      <li className="mx-0 my-2" key={item.name}>
+                        <a href={item.href} className="text-md hover:underline">
                           {item.name}
                         </a>
                       </li>
@@ -75,9 +71,9 @@ export default function Footer() {
           </div>
 
           <ul className="flex gap-8">
-            {disclaimer.links.map(item => {
+            {disclaimer.links.map((item, index) => {
               return (
-                <li>
+                <li key={index}>
                   <a href={item.href} className="hover:underline">
                     {item.name}
                   </a>

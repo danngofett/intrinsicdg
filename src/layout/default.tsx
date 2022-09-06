@@ -14,15 +14,11 @@ export default function Layout({ siteMeta, children }) {
     <>
       <SiteHeader siteTitle={siteMeta?.title || `Title`} />
 
-      <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <main>{children}</main>
-        </div>
-      </div>
+      <main>{children}</main>
 
       <SiteFooter />
 
-      <div className="absolute w-full inset-0 -z-10 h-screen opacity-10 bg-hero-light bg-cover" />
+      <div className="absolute w-full inset-0 -z-10 h-screen opacity-20 bg-hero-light bg-cover" />
     </>
   )
 }

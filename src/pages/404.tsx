@@ -6,7 +6,7 @@ import { SEO } from '@components'
 
 const NotFoundPage = () => {
   const response = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title

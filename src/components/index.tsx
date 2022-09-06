@@ -1,5 +1,6 @@
 import Card from './card'
 import CallToAction from './cta'
+import Container from './container'
 import SiteHeader from './site-header'
 import Logo from './logo'
 import Newsletter from './newsletter'
@@ -12,6 +13,7 @@ import TextInput from './text-input'
 export {
   Card,
   CallToAction,
+  Container,
   SiteHeader,
   Logo,
   Newsletter,
