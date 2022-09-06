@@ -14,8 +14,8 @@ export default function Team({ heading, description, label, href }: TeamType) {
     <Container>
       <div className="grid gap-4 grid-cols-8 lg:grid-cols-16 py-12 lg:py-16">
         <div className="lg:flex gap-4 lg:justify-between lg:flex-col col-span-full lg:col-span-6">
-          <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl mb-4 lg:mb-0">
-            <span className="block text-primary">{heading}</span>
+          <h2 className="text-3xl font-black tracking-tight sm:text-4xl mb-4 lg:mb-0 text-primary">
+            {heading}
           </h2>
 
           <p>{description}</p>

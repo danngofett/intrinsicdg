@@ -12,7 +12,7 @@ export default function CallToAction({
   subheading,
 }: CallToActionType) {
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:py-32 lg:px-8">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center lg:flex lg:items-center lg:justify-between lg:flex-col">
         <span className="block mb-4">{subheading}</span>
 

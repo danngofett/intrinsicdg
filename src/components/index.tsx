@@ -2,6 +2,7 @@ import Button from './button'
 import Card from './card'
 import CallToAction from './cta'
 import Container from './container'
+import FeatureGrid from './feature-grid'
 import SiteHeader from './site-header'
 import Logo from './logo'
 import NavLink from './nav-link'
@@ -17,6 +18,7 @@ export {
   Card,
   CallToAction,
   Container,
+  FeatureGrid,
   SiteHeader,
   Logo,
   NavLink,
