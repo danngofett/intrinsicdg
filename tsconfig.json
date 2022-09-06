@@ -14,7 +14,12 @@
     "removeComments": false,
     "baseUrl": "src",
     "paths": {
-      "@components": ["components/index"]
+      "@assets/*": ["assets/*"],
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"],
+      "@components": ["components/index"],
+      "@layout": ["layout/index"],
+      "@contexts/*": ["contexts/*"]
     }
   },
   "include": ["./src/**/*"]

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { PageProps, HeadFC } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '@layout/default'
+import { Default } from '@layout'
 import { SEO, CallToAction, Team, Card, Newsletter } from '@components'
 
 type DataProps = {}
@@ -19,7 +19,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
   `)
 
   return (
-    <Layout siteMeta={response.site.siteMeta}>
+    <Default siteMeta={response.site.siteMeta}>
       <CallToAction
         heading="Explore the radical transparency mission statement"
         subheading="Explore now"
@@ -39,10 +39,11 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
       />
 
       <Newsletter
+        className="mt-24"
         heading="Explore the radical transparency mission statement"
         description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus lorem ipsum."
       />
-    </Layout>
+    </Default>
   )
 }
 

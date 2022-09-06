@@ -13,13 +13,11 @@ export default function TextInput({
 }: TextInputType) {
   return (
     <div className={className}>
-      <label
-        htmlFor="price"
-        className="block text-sm font-medium text-gray-700"
-      >
+      <label htmlFor="price" className="block text-sm font-bold text-gray-700">
         {label}
       </label>
-      <div className="relative mt-2 rounded-md">
+
+      <div className="relative mt-2 rounded-md flex">
         <input
           type="email"
           name="email"
@@ -28,8 +26,8 @@ export default function TextInput({
           placeholder="your@email.com"
         />
 
-        <button className="absolute inset-y-0 right-0 flex items-center bg-primary text-white rounded-r px-8">
-          Sign up
+        <button className="flex items-center bg-primary text-white rounded-md px-6 shrink-0 ml-4 text-sm">
+          Notify me
         </button>
       </div>
 

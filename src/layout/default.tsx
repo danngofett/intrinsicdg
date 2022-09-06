@@ -7,12 +7,12 @@
 
 import * as React from 'react'
 
-import { Header, SiteFooter } from '@components'
+import { SiteHeader, SiteFooter } from '@components'
 
 export default function Layout({ siteMeta, children }) {
   return (
     <>
-      <Header siteTitle={siteMeta?.title || `Title`} />
+      <SiteHeader siteTitle={siteMeta?.title || `Title`} />
 
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">

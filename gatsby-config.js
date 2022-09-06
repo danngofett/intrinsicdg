@@ -47,6 +47,7 @@ module.exports = {
           '@layout': path.resolve(__dirname, 'src/layout'),
           '@pages': path.resolve(__dirname, 'src/pages'),
           '@styles': path.resolve(__dirname, 'src/styles'),
+          '@contexts': path.resolve(__dirname, 'src/contexts'),
         },
         extensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
       },
