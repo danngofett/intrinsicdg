@@ -70,7 +70,11 @@ export default function Footer() {
             })}
           </div>
 
-          <ul className="flex gap-8">
+          <ul className="flex gap-8 ">
+            <li>
+              <span>Copyright © 2022 TaxPal. All rights reserved.</span>
+            </li>
+
             {disclaimer.links.map((item, index) => {
               return (
                 <li key={index}>

@@ -31,7 +31,11 @@ export default function Header({ siteTitle }: HeaderType) {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                   <div className="w-48 py-8">
-                    <Link to="/" className="block text-primary">
+                    <Link
+                      to="/"
+                      className="block text-primary"
+                      title={siteTitle}
+                    >
                       <Logo />
                     </Link>
                   </div>
@@ -44,9 +48,9 @@ export default function Header({ siteTitle }: HeaderType) {
                           href={item.href}
                           className={classNames(
                             item.cta
-                              ? 'bg-primary text-white hover:bg-gray-700 block px-3 py-2 rounded-lg text-base font-semibold hover:bg-primary'
+                              ? 'bg-primary text-white block px-3 py-2 rounded-lg text-base font-semibold hover:bg-primary'
                               : '',
-                            'px-3 py-2 text-md font-semibold lowercase text-primary'
+                            'px-3 py-2 text-md font-semibold lowercase text-primary relative after:content after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-primary after:h-[2px] after:opacity-0 hover:after:opacity-100 hover:after:w-full after:transition-all after:duration-500 after:origin-center after:mx-auto after:right-0'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
