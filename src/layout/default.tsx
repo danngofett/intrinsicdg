@@ -7,7 +7,7 @@
 
 import * as React from 'react'
 
-import { SiteHeader, SiteFooter } from '@components'
+import { SiteHeader, SiteFooter, Newsletter } from '@components'
 import useScrollDirection from '@hooks/scroll-direction'
 
 const ScrollDirectionContext = React.createContext('at-top')
@@ -28,6 +28,13 @@ export default function Layout({ siteMeta, children }) {
         />
 
         <main className="py-48">{children}</main>
+
+        <section id="contact" className="py-16 md:py-20 lg:py-12">
+          <Newsletter
+            heading="Explore the radical transparency mission statement"
+            description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus lorem ipsum."
+          />
+        </section>
 
         <SiteFooter />
 

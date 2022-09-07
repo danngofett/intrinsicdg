@@ -16,7 +16,7 @@ type DataProps = {}
 
 const IndexRoute = ({ data }: PageProps<DataProps>) => {
   const response = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
@@ -46,7 +46,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
           heading="Meet our leadership"
           description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
           label="Read more"
-          href="#"
+          href="/team"
         />
       </section>
 
@@ -56,13 +56,6 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
           description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
           label="Read more"
           href="#"
-        />
-      </section>
-
-      <section id="contact" className="py-16 md:py-20 lg:py-12">
-        <Newsletter
-          heading="Explore the radical transparency mission statement"
-          description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus lorem ipsum."
         />
       </section>
     </Default>
