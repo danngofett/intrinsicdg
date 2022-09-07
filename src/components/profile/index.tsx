@@ -10,7 +10,7 @@ export default function Profile({ name, role, imgSrc }) {
       />
 
       <div className="">
-        <h3 className="text-base font-semibold">{name}</h3>
+        <h3 className="text-base font-semibold text-slate-800 m-0">{name}</h3>
         <h4 className="text-base font-semibold text-primary">{role}</h4>
       </div>
     </div>

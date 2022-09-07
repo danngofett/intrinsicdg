@@ -27,7 +27,7 @@ export default function Layout({ siteMeta, children }) {
           direction={scrollDirection}
         />
 
-        <main>{children}</main>
+        <main className="py-48">{children}</main>
 
         <SiteFooter />
 

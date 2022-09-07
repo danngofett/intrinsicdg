@@ -11,10 +11,10 @@ export interface TeamType {
 
 export default function Team({ heading, description, label, href }: TeamType) {
   return (
-    <Container>
+    <Container className="">
       <div className="grid gap-4 grid-cols-8 lg:grid-cols-16 py-12 lg:py-16">
         <div className="lg:flex gap-4 lg:justify-between lg:flex-col col-span-full lg:col-span-6">
-          <h2 className="text-3xl font-black tracking-tight sm:text-4xl mb-4 lg:mb-0 text-primary">
+          <h2 className="text-3xl font-black tracking-tight sm:text-4xl mb-4 lg:mb-0 mt-0 text-primary">
             {heading}
           </h2>
 
@@ -36,25 +36,25 @@ export default function Team({ heading, description, label, href }: TeamType) {
         <div className="grid gap-4 sm:grid-cols-2 lg:col-span-10 lg:px-12 col-span-full sm:px-8">
           <Profile
             name="Daniel Ngo"
-            role="Developer/Designer"
+            role="Position"
             imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           />
 
           <Profile
             name="Mark Shields"
-            role="Developer/Designer"
+            role="Position"
             imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           />
 
           <Profile
             name="Roman Kennedy"
-            role="Developer/Designer"
+            role="Position"
             imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           />
 
           <Profile
             name="Georgia Reader"
-            role="Developer/Designer"
+            role="Position"
             imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           />
         </div>

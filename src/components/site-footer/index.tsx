@@ -28,8 +28,8 @@ const navigation = [
 const disclaimer = {
   category: 'Disclaimer',
   links: [
-    { name: 'Privacy statement', href: '#' },
-    { name: 'Accessibility', href: '#' },
+    { name: 'Privacy statement', href: '/privacy-statement' },
+    { name: 'Accessibility', href: '/accessibility' },
   ],
 }
 

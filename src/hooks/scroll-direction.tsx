@@ -12,6 +12,8 @@ export interface ScrollDirectionType {
   off?: boolean
 }
 
+export type ScrollDirection = 'at-top' | 'up' | 'down'
+
 export default function useScrollDirection({
   initialDirection,
   thresholdPixels,

@@ -30,11 +30,15 @@ export default function Header({ siteTitle, direction }: HeaderType) {
           {({ open }) => (
             <>
               <div
-                className={`fixed w-full top-0 z-10 px-8 transition-transform duration-200 ${
+                className={`fixed w-full top-0 z-10 px-4 transition-transform duration-200 ${
                   direction === 'down' ? '-translate-y-full' : 'translate-y-0'
                 }`}
               >
-                <div className="flex items-center justify-between shadow-lg rounded-lg px-8 py-4 max-w-7xl z-10 bg-white mx-auto mt-8">
+                <div
+                  className={`flex items-center justify-between  rounded-lg px-4 md:px-12 py-4 max-w-7xl z-10 mx-auto mt-8 transition-all duration-500 ${
+                    direction !== 'at-top' ? 'shadow-lg bg-white' : ''
+                  }`}
+                >
                   <div className="w-48">
                     <Link
                       to="/"

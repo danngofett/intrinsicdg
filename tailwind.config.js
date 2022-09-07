@@ -20,7 +20,7 @@ module.exports = {
           DEFAULT: '#3B44AC',
         },
         secondary: {
-          DEFAULT: '#202993',
+          DEFAULT: '#011a3c',
         },
         tertiary: {
           DEFAULT: '#4B54BA',
@@ -29,6 +29,31 @@ module.exports = {
           200: '#D9D9D9',
         },
       },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.secondary.DEFAULT'),
+            h1: {
+              color: theme('colors.primary.DEFAULT'),
+            },
+            h2: {
+              color: theme('colors.primary.DEFAULT'),
+            },
+            h3: {
+              color: theme('colors.primary.DEFAULT'),
+            },
+            strong: {
+              color: theme('colors.primary.DEFAULT'),
+            },
+            a: {
+              color: theme('colors.primary.DEFAULT'),
+              '&:hover': {
+                color: theme('colors.primary.DEFAULT'),
+              },
+            },
+          },
+        },
+      }),
       height: {
         240: 240,
         360: 360,
@@ -67,5 +92,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }
