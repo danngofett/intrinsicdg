@@ -7,6 +7,7 @@ import SiteHeader from './site-header'
 import Logo from './logo'
 import NavLink from './nav-link'
 import Newsletter from './newsletter'
+import Offset2x2Grid from './offset-2x2-grid'
 import Profile from './profile'
 import SEO from './seo'
 import SiteFooter from './site-footer'
@@ -23,6 +24,7 @@ export {
   Logo,
   NavLink,
   Newsletter,
+  Offset2x2Grid,
   Profile,
   SEO,
   SiteFooter,

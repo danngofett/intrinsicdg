@@ -82,7 +82,7 @@ export default function Footer() {
             />
           </div>
 
-          <p className="font-bold mt-4 md:mt-0 ">
+          <p className="font-semibold mt-4 md:mt-0 ">
             Intrinsic Development Group is located on the traditional lands of
             the Wurundjeri people of the Kulin Nation. We pay our respects to
             Elders both past and present and recognise Aboriginal and Torres

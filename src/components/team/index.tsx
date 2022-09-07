@@ -20,7 +20,7 @@ export default function Team({ heading, description, label, href }: TeamType) {
 
           <p>{description}</p>
 
-          <div className="mt-4 lg:mt-0 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="mt-4 flex lg:mt-0 lg:flex-shrink-0">
             <a
               href={href}
               className="text-base font-semibold text-primary hover:underline"

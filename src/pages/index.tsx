@@ -3,7 +3,14 @@ import { PageProps, HeadFC } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Default } from '@layout'
-import { SEO, CallToAction, FeatureGrid, Team, Newsletter } from '@components'
+import {
+  SEO,
+  CallToAction,
+  FeatureGrid,
+  Team,
+  Newsletter,
+  Offset2x2Grid,
+} from '@components'
 
 type DataProps = {}
 
@@ -36,6 +43,15 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
 
       <section id="team" className="py-16 md:py-20 lg:py-12">
         <Team
+          heading="Meet our leadership"
+          description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
+          label="Read more"
+          href="#"
+        />
+      </section>
+
+      <section id="products" className="py-16 md:py-20 lg:py-12">
+        <Offset2x2Grid
           heading="Meet our leadership"
           description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
           label="Read more"
