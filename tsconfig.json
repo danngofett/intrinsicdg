@@ -19,7 +19,8 @@
       "@pages/*": ["pages/*"],
       "@components": ["components/index"],
       "@layout": ["layout/index"],
-      "@contexts/*": ["contexts/*"]
+      "@contexts/*": ["contexts/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["./src/**/*"]

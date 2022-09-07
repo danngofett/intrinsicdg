@@ -8,17 +8,31 @@
 import * as React from 'react'
 
 import { SiteHeader, SiteFooter } from '@components'
+import useScrollDirection from '@hooks/scroll-direction'
+
+const ScrollDirectionContext = React.createContext('at-top')
 
 export default function Layout({ siteMeta, children }) {
+  const scrollDirection = useScrollDirection({
+    initialDirection: 'at-top',
+    offset: 200,
+    thresholdPixels: 50,
+  })
+
   return (
     <>
-      <SiteHeader siteTitle={siteMeta?.title || `Title`} />
+      <ScrollDirectionContext.Provider value={scrollDirection}>
+        <SiteHeader
+          siteTitle={siteMeta?.title || `Title`}
+          direction={scrollDirection}
+        />
 
-      <main>{children}</main>
+        <main>{children}</main>
 
-      <SiteFooter />
+        <SiteFooter />
 
-      <div className="absolute w-full inset-0 -z-10 h-screen opacity-20 bg-hero-light bg-cover" />
+        <div className="absolute w-full inset-0 -z-10 h-screen opacity-20 bg-hero-light bg-cover" />
+      </ScrollDirectionContext.Provider>
     </>
   )
 }

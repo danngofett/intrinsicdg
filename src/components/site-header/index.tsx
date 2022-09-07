@@ -8,6 +8,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 export interface HeaderType {
   siteTitle: string
+  direction: 'at-top' | 'up' | 'down'
 }
 
 const navigation = [
@@ -21,14 +22,18 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header({ siteTitle }: HeaderType) {
+export default function Header({ siteTitle, direction }: HeaderType) {
   return (
     <>
       <div className="min-h-full">
         <Disclosure as="nav">
           {({ open }) => (
             <>
-              <div className="fixed w-full top-0 z-10 px-8">
+              <div
+                className={`fixed w-full top-0 z-10 px-8 transition-transform duration-200 ${
+                  direction === 'down' ? '-translate-y-full' : 'translate-y-0'
+                }`}
+              >
                 <div className="flex items-center justify-between shadow-lg rounded-lg px-8 py-4 max-w-7xl z-10 bg-white mx-auto mt-8">
                   <div className="w-48">
                     <Link
@@ -83,14 +88,18 @@ export default function Header({ siteTitle }: HeaderType) {
 
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 sm:px-3 fixed inset-0 bg-white z-10">
-                  <div className="w-48 py-10 pl-7">
-                    <Link
-                      to="/"
-                      className="block text-primary"
-                      title={siteTitle}
-                    >
-                      <Logo />
-                    </Link>
+                  <div className="flex justify-between items-center py-14 px-10">
+                    <Disclosure.Button className="bg-primary inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white ml-auto">
+                      <span className="sr-only">Open main menu</span>
+                      {open ? (
+                        <XIcon className="block h-6 w-6" aria-hidden="true" />
+                      ) : (
+                        <MenuIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
+                      )}
+                    </Disclosure.Button>
                   </div>
 
                   {navigation.map(item => (
