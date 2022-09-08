@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { Container, Card } from '@components'
 
+import ImageSecure from '@assets/images/secure.png'
+import ImageChat from '@assets/images/chat.png'
+import ImageApplication from '@assets/images/application.png'
+
 export interface FeatureGridType {
   heading?: string
 }
@@ -21,9 +25,21 @@ export default function FeatureGrid({ heading }: FeatureGridType) {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12 mx-auto max-w-xl lg:max-w-5xl lg:my-16">
-          <Card title="Transparency" />
-          <Card title="Community" />
-          <Card title="Experience" />
+          <Card
+            title="Transparency"
+            imageSrc={ImageSecure}
+            imageAlt="Male logging in mobile application"
+          />
+          <Card
+            title="Community"
+            imageSrc={ImageChat}
+            imageAlt="Male with chat bubbles"
+          />
+          <Card
+            title="Experience"
+            imageSrc={ImageApplication}
+            imageAlt="Male and female holding application icons"
+          />
         </div>
       </Container>
     </div>

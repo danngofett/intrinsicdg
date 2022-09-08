@@ -35,7 +35,11 @@ const features = [
   },
 ]
 
-export default function Offset2x2Grid() {
+export interface Offset2x2GridType {
+  heading?: string
+}
+
+export default function Offset2x2Grid({ heading }: Offset2x2GridType) {
   return (
     <Container className="overflow-hidden">
       <div className="relative mx-auto max-w-7xl py-12">
@@ -74,11 +78,13 @@ export default function Offset2x2Grid() {
         </svg>
 
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
-          <div className="lg:col-span-1">
-            <h2 className="text-3xl font-black tracking-tight sm:text-4xl text-primary">
-              Our work
-            </h2>
-          </div>
+          {heading && (
+            <div className="lg:col-span-1">
+              <h2 className="text-3xl font-black tracking-tight sm:text-4xl text-primary">
+                {heading}
+              </h2>
+            </div>
+          )}
           <dl className="mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0">
             {features.map(feature => (
               <div key={feature.name}>

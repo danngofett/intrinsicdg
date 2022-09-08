@@ -8,7 +8,6 @@ import {
   CallToAction,
   FeatureGrid,
   Team,
-  Newsletter,
   Offset2x2Grid,
 } from '@components'
 
@@ -34,6 +33,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
         <CallToAction
           heading="Explore the radical transparency mission statement"
           subheading="Explore now"
+          label="Discover more"
         />
       </section>
 
@@ -51,12 +51,7 @@ const IndexRoute = ({ data }: PageProps<DataProps>) => {
       </section>
 
       <section id="products" className="py-16 md:py-20 lg:py-12">
-        <Offset2x2Grid
-          heading="Meet our leadership"
-          description="Aenean vulputate tempor ex non semper. Donec libero metus, egestas gravida mauris quis, tristique suscipit risus. Sed sed nibh pulvinar, ullamcorper nulla ut, laoreet metus. Donec elementum neque sed dolor."
-          label="Read more"
-          href="#"
-        />
+        <Offset2x2Grid heading="Our work" />
       </section>
     </Default>
   )

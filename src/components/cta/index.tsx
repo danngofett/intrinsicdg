@@ -5,11 +5,13 @@ import { Button } from '@components'
 export interface CallToActionType {
   heading: string
   subheading: string
+  label: string
 }
 
 export default function CallToAction({
   heading,
   subheading,
+  label,
 }: CallToActionType) {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,15 +22,13 @@ export default function CallToAction({
           <span className="block text-primary">{heading}</span>
         </h2>
 
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 justify-center">
-          <div className="inline-flex rounded-md shadow">
-            <Button
-              label="Get started"
-              href="https://github.com/"
-              size="large"
-            />
+        {label && (
+          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 justify-center">
+            <div className="inline-flex rounded-md shadow">
+              <Button label={label} href="https://github.com/" size="large" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )
