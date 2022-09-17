@@ -3,43 +3,44 @@ import { PageProps, HeadFC } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Default } from '@layout'
-import { SEO, Container, Newsletter } from '@components'
+import { SEO, Container } from '@components'
+
+import DanielNgoImage from '@assets/images/team/large/daniel-ngo.jpg'
+import RomanKennedyImage from '@assets/images/team/large/roman-kennedy.jpg'
+import MarkShieldsImage from '@assets/images/team/large/mark-shields.jpg'
+import GeorgiaReaderImage from '@assets/images/team/large/georgia-reader.jpg'
 
 type DataProps = {}
 
 const people = [
   {
-    name: 'Leonard Krasner',
+    name: 'Daniel Ngo',
     role: 'Senior Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: DanielNgoImage,
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
-    name: 'Emma Dorsey',
+    name: 'Roman Kennedy',
     role: 'Senior Front-end Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: RomanKennedyImage,
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
-    name: 'Leslie Alexander',
+    name: 'Mark Shields',
     role: 'Co-Founder / CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: MarkShieldsImage,
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
-    name: 'Whitney Francis',
+    name: 'Georgia Reader',
     role: 'Copywriter',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: GeorgiaReaderImage,
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
 ]

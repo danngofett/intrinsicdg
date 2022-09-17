@@ -2,6 +2,11 @@ import * as React from 'react'
 
 import { Profile, Container } from '@components'
 
+import DanielNgoImage from '@assets/images/team/small/daniel-ngo.jpg'
+import RomanKennedyImage from '@assets/images/team/small/roman-kennedy.jpg'
+import MarkShieldsImage from '@assets/images/team/small/mark-shields.jpg'
+import GeorgiaReaderImage from '@assets/images/team/small/georgia-reader.jpg'
+
 export interface TeamType {
   heading: string
   description: string
@@ -34,28 +39,24 @@ export default function Team({ heading, description, label, href }: TeamType) {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:col-span-10 lg:px-12 col-span-full sm:px-8">
-          <Profile
-            name="Daniel Ngo"
-            role="Position"
-            imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          />
+          <Profile name="Daniel Ngo" role="Position" imgSrc={DanielNgoImage} />
 
           <Profile
             name="Mark Shields"
             role="Position"
-            imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            imgSrc={MarkShieldsImage}
           />
 
           <Profile
             name="Roman Kennedy"
             role="Position"
-            imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            imgSrc={RomanKennedyImage}
           />
 
           <Profile
             name="Georgia Reader"
             role="Position"
-            imgSrc="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            imgSrc={GeorgiaReaderImage}
           />
         </div>
       </div>
